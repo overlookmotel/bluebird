@@ -64,7 +64,7 @@ var lastLineCode = "                                                         \n\
     fillTypes(undefined);                                                    \n\
     fillTypes(false);                                                        \n\
     fillTypes(new Promise(INTERNAL));                                        \n\
-    CapturedTrace.setBounds(async.firstLineError, util.lastLineError);       \n\
+    CapturedTrace.setBounds(Async.firstLineError, util.lastLineError);       \n\
     return Promise;                                                          \n\
 ";
 

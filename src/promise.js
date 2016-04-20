@@ -28,7 +28,9 @@ if (util.isNode) {
 util.notEnumerableProp(Promise, "_getDomain", getDomain);
 
 var UNDEFINED_BINDING = {};
-var async = require("./async.js");
+var Async = require("./async.js");
+var async = new Async();
+Promise._async = async;
 var errors = require("./errors.js");
 var TypeError = Promise.TypeError = errors.TypeError;
 Promise.RangeError = errors.RangeError;
@@ -44,7 +46,7 @@ var tryConvertToPromise = require("./thenables.js")(Promise, INTERNAL);
 var PromiseArray =
     require("./promise_array.js")(Promise, INTERNAL,
                                     tryConvertToPromise, apiRejection);
-var CapturedTrace = require("./captured_trace.js")();
+var CapturedTrace = require("./captured_trace.js")(Promise);
 var isDebugging = require("./debuggability.js")(Promise, CapturedTrace);
  /*jshint unused:false*/
 var createContext =

@@ -1,7 +1,7 @@
 "use strict";
 module.exports = function(Promise) {
 var errors = require("./errors.js");
-var async = require("./async.js");
+var async = Promise._async;
 var ASSERT = require("./assert.js");
 var CancellationError = errors.CancellationError;
 

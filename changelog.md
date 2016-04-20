@@ -1,3 +1,7 @@
+## Next
+
+ - `async` object is exposed as `Promise._async`
+
 ## 2.10.2 (2015-10-01)
 
 Features:

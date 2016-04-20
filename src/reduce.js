@@ -6,7 +6,7 @@ module.exports = function(Promise,
                           INTERNAL) {
 var getDomain = Promise._getDomain;
 var ASSERT = require("./assert.js");
-var async = require("./async.js");
+var async = Promise._async;
 var util = require("./util.js");
 var tryCatch = util.tryCatch;
 var errorObj = util.errorObj;

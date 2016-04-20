@@ -2,7 +2,7 @@
 module.exports = function(Promise, PromiseArray) {
 var ASSERT = require("./assert.js");
 var util = require("./util.js");
-var async = require("./async.js");
+var async = Promise._async;
 var tryCatch = util.tryCatch;
 var errorObj = util.errorObj;
 

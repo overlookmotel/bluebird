@@ -1,7 +1,7 @@
 "use strict";
 module.exports = function(Promise, CapturedTrace) {
 var getDomain = Promise._getDomain;
-var async = require("./async.js");
+var async = Promise._async;
 var Warning = require("./errors.js").Warning;
 var util = require("./util.js");
 var ASSERT = require("./assert.js");

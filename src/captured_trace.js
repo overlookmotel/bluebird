@@ -1,6 +1,6 @@
 "use strict";
-module.exports = function() {
-var async = require("./async.js");
+module.exports = function(Promise) {
+var async = Promise._async;
 var ASSERT = require("./assert.js");
 var util = require("./util.js");
 var bluebirdFramePattern =
